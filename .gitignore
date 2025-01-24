@@ -33,7 +33,7 @@ __pycache__/
 *.so
 
 # Distribution / packaging
-.idea
+.idea/
 .Python
 env/
 build/
