@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="{% static 'assets/css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/leaderboard.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/base.css' %}">
+    <meta charset="UTF-8">
+    <title>Axion</title>
+</head>
+<body>
+<header>
+        <div class="coin-counter">
+            <img src="{% static '/assets/img/coin.png' %}" alt="Coin Icon">
+            <span class="tap_count">{{ user.tap_count }}</span>
+        </div>
+    <a href="#" class="logo">Axion</a>
+    <div class="p-10"><p></p></div>
+</header>
+{% block main %}
+{% endblock %}
+<nav class="bottom-button">
+    <form action="{% url 'index' pk=user.id %}">
+        <button class="b-item btn">
+            <a href="#">Earn</a>
+        </button>
+        </form>
+    <form action="{% url 'leaderboard' pk=user.id %}">
+        <button  class="b-item btn">
+            <a href="#">Leaderboard</a>
+        </button>
+        </form>
+</nav>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+        .leaderboard-cup{
+            display: flex;
+            justify-content: center;
+        }
+
+        .leaderboard-text{
+            color: aliceblue;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            padding: 0;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .cup-lb{
+            width: 168px;
+            height: 342px;
+        }
+        .section-you{
+            display: flex;
+            justify-content: center;
+        }
+
+        .section-l{
+            display: flex;
+            justify-content: center;
+            padding-bottom: 50px;
+        }
+         .leaderboard-y {
+            width: 70vw;
+            height: auto;
+             margin-top: 20px;
+            margin-bottom: 50px;
+            padding: 5px 0;
+             border-radius: 10px;
+            background: rgb(255, 255, 255);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .leaderboard {
+            width: 90vw;
+            height: auto;
+            margin-bottom: 50px;
+            padding: 0;
+            border-radius: 10px;
+            background: rgb(255, 255, 255);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .you{
+            border-radius: 10px;
+        }
+        .player {
+            display: flex;
+            align-items: center;
+            padding: 7px 0;
+            color: white;
+        }
+        .player img.avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 15px;
+            margin-left: 20px;
+        }
+        .player span.rank {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .coin-count{
+            padding-top: 3px;
+            font-size: 17px;
+        }
+        .gold {
+            border-radius: 10px 10px 0 0;
+            background-color: rgba(255, 215, 0, 0.91);
+        }
+        .silver {
+            background-color: #C0C0C0;
+        }
+        .bronze {
+            background-color: #CD7F32;
+        }
+        .black {
+            background-color: #202020;
+        }
+        .player-details {
+            text-align: left;
+        }
+
+
+         @media (max-width: 600px){
+            .cup-lb{
+                height: 300px;
+            }
+             strong {
+                 font-size: 20px;
+                 font-family: system-ui;
+                 font-weight: 500;
+             }
+             .coin-count{
+                 font-size: 15px;
+                 font-weight: 400;
+             }
+             .rank{
+                 font-size: 16px;
+                 font-weight: 500;
+             }
+         }

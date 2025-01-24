@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+    <section class="l-MainSection">
+    <div class="leaderboard-cup">
+        <img class="cup-lb" src="{% static '/assets/img/trophy.png' %}">
+    </div>
+    <div class="leaderboard-text">
+    <h1>LEADERBOARD</h1>
+    </div>
+    <section class="section-you">
+        <div class="leaderboard-y">
+    <div class="player you" style="color: black;">
+            <img class="avatar" src="https://via.placeholder.com/40" alt="Avatar">
+            <div class="player-details">
+                <div><strong>{{ user.full_name }}</strong></div>
+                <div  class="coin-count">{{ user.tap_count }} Axions</div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section class="section-l">
+    <div class="leaderboard">
+        {% for item in leaderboard %}
+         <div class="player {% if forloop.counter == 1 %} gold{% elif forloop.counter == 2 %}silver {% elif forloop.counter == 3 %}bronze{% else %}black{% endif %}">
+            <img class="avatar" src="https://via.placeholder.com/40" alt="Avatar">
+            <span class="rank">#{{ forloop.counter }}</span>
+            <div class="player-details">
+                <div class="l-text"><strong>{{ item.full_name }}</strong></div>
+                <div class="coin-count">{{ item.tap_count }} Axions</div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    </section>
+    </section>
+{%  endblock %}

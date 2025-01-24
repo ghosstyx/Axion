@@ -1,0 +1,93 @@
+        .gallery {
+            width: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-image {
+            width: 400px;
+            height: 400px;
+        }
+        .img-div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+        }
+
+        .div-rank{
+            display: flex;
+            justify-content: right;
+            margin: 0;
+        }
+
+        .p-rank{
+            font-family: "Segoe UI", system-ui, sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #C0C0C0;
+            background: rgba(44, 18, 71, 0.54);
+            border-radius: 17px;
+            padding: 6px 17px;
+        }
+
+        /*Notification +1 per tab*/
+        /*.notification {*/
+        /*    position: absolute;*/
+        /*    font-size: 1rem;*/
+        /*    color: #ccc8b8;*/
+        /*    opacity: 0;*/
+        /*    animation: fade 1s ease-out;*/
+        /*}*/
+        /*@keyframes fade {*/
+        /*    0% {*/
+        /*        opacity: 1;*/
+        /*        transform: translateY(0);*/
+        /*    }*/
+        /*    100% {*/
+        /*        opacity: 0;*/
+        /*        transform: translateY(-20px);*/
+        /*    }*/
+        /*}*/
+
+        .p-10{
+            padding: 0 10px;
+        }
+        form{
+            width: 100%;
+        }
+
+
+        @media (max-width: 600px) {
+            .logo {
+                font-size: 1rem;
+            }
+            .main-section{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .img-div{
+                margin: 0;
+            }
+
+            .coin-counter img {
+                width: 20px;
+                height: 20px;
+            }
+             .div-rank{
+                 justify-content: center;
+             }
+            .gallery{
+                width: 100%;
+                max-width: 1200px;
+                padding: 10px;
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 20px;
+                }
+            .main-image {
+                width: 100%;
+                height: auto;
+            }
+        }
