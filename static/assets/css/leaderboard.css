@@ -49,6 +49,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .you{
+            margin-left: 15px;
             border-radius: 10px;
         }
         .player {
@@ -105,7 +106,8 @@
                  font-weight: 400;
              }
              .rank{
-                 font-size: 16px;
+                 padding-left: 15px;
+                 font-size: 18px;
                  font-weight: 500;
              }
          }

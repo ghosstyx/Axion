@@ -14,7 +14,7 @@
 <header>
         <div class="coin-counter">
             <img src="{% static '/assets/img/coin.png' %}" alt="Coin Icon">
-            <span class="tap_count">{{ user.tap_count }}</span>
+            <span id="click-count" class="tap_count">{{ user.tap_count }}</span>
         </div>
     <a href="#" class="logo">Axion</a>
     <div class="p-10"><p></p></div>
@@ -24,12 +24,12 @@
 <nav class="bottom-button">
     <form action="{% url 'index' pk=user.id %}">
         <button class="b-item btn">
-            <a href="#">Earn</a>
+            <a href="{% url 'index' pk=user.id %}">Earn</a>
         </button>
         </form>
     <form action="{% url 'leaderboard' pk=user.id %}">
         <button  class="b-item btn">
-            <a href="#">Leaderboard</a>
+            <a href="{% url 'leaderboard' pk=user.id %}">Leaderboard</a>
         </button>
         </form>
 </nav>

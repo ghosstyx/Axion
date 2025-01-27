@@ -2,16 +2,50 @@
 {% load static %}
 {% block main %}
         <div class="gallery">
-    <form action="/{{user.pk}}/" method="get" class="img-div">
-        <input type="hidden" name="count" id="countInput" value="1">
-        <button type="submit" style="background: none; border: none; padding: 0;">
-        <img src="{% static '/assets/img/coin.png' %}" alt="Main Coin" class="main-image" id="main-coin" draggable="false">
-        </button>
-    </form>
+        <img src="{% static '/assets/img/coin.png' %}" alt="Main Coin" class="main-image" id="main-coin">
         </div>
         <div class="div-rank">
     <div>
         <p class="p-rank">{{ user.rank }}</p>
     </div>
         </div>
+    <script>
+    
+    const mainCoin = document.getElementById('main-coin');
+    const clickCount = document.getElementById('click-count');
+    const userId = '{{user.id}}';
+    const tapCount = '{{ user.tap_count }}';
+    const number = parseInt(tapCount)
+    
+    let count = 0;
+        mainCoin.addEventListener('click', (e) => {
+            count++;
+            clickCount.textContent = number + count;
+            
+            fetch(`/${userId}/`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': '{{ csrf_token }}',
+            },
+            body: JSON.stringify({ count: 1 }),
+            })
+            .then(response => response.json())
+            .then(data => {
+            console.log('Server response:', data);
+            })
+            .catch(error => {
+            console.error('Error:', error);
+            });
+            fetch(`/${userId}/`, {
+            method: "get",
+            headers: new Headers({
+            "ngrok-skip-browser-warning": "69420",
+            }),
+            })
+            .then((response) => response.json())
+            .then((data) => console.log(data))
+            .catch((err) => console.log(err));
+            });
+    </script>
 {%  endblock %}

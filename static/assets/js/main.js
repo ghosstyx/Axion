@@ -1,10 +1,10 @@
-const mainCoin = document.getElementById('main-coin');
-        const clickCount = document.getElementById('click-count');
-        let count = 0;
+//
+// const clickCount = document.getElementById('click-count');
+// let count = 0;
 
         mainCoin.addEventListener('click', (e) => {
-            count++;
-            clickCount.textContent = count;
+            // count++;
+            // clickCount.textContent = count;
 
             const notification = document.createElement('div');
             notification.className = 'notification';
@@ -22,4 +22,5 @@ const mainCoin = document.getElementById('main-coin');
             setTimeout(() => {
                 notification.remove();
             }, 1000);
+
         });

@@ -14,9 +14,12 @@ async def main(message: Message, state: FSMContext):
     user_id = message.from_user.id
     obj, created = await User.objects.aget_or_create(id=user_id)
     if created:
-         obj.full_name = message.from_user.full_name + " (" + message.from_user.username + ")"
-         obj.date_of_birth = datetime.now()
-         await obj.asave()
+        if message.from_user.username:
+         obj.full_name = message.from_user.full_name + "(" + message.from_user.username + ")"
+        else:
+         obj.full_name = message.from_user.full_name
+        obj.date_of_birth = datetime.now()
+        await obj.asave()
     inline_kb = InlineKeyboardBuilder()
     web_app_info = WebAppInfo(url=f"https://lamprey-romantic-albacore.ngrok-free.app/{user_id}")
     inline_kb.add(types.InlineKeyboardButton(

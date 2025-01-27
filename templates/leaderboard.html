@@ -11,7 +11,6 @@
     <section class="section-you">
         <div class="leaderboard-y">
     <div class="player you" style="color: black;">
-            <img class="avatar" src="https://via.placeholder.com/40" alt="Avatar">
             <div class="player-details">
                 <div><strong>{{ user.full_name }}</strong></div>
                 <div  class="coin-count">{{ user.tap_count }} Axions</div>
@@ -24,7 +23,6 @@
     <div class="leaderboard">
         {% for item in leaderboard %}
          <div class="player {% if forloop.counter == 1 %} gold{% elif forloop.counter == 2 %}silver {% elif forloop.counter == 3 %}bronze{% else %}black{% endif %}">
-            <img class="avatar" src="https://via.placeholder.com/40" alt="Avatar">
             <span class="rank">#{{ forloop.counter }}</span>
             <div class="player-details">
                 <div class="l-text"><strong>{{ item.full_name }}</strong></div>
