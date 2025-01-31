@@ -23,7 +23,6 @@ def index(request , *args, **kwargs):
             return JsonResponse({'error':'Invalid count value'}, status=400)
         user.tap_count += count
         user.save()
-        print(count)
         return JsonResponse({'message':'Count updated', 'tap_count':user.tap_count})
     context = {'user': user}
     return render(request, 'index.html', context=context)

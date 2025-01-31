@@ -21,7 +21,7 @@ async def main(message: Message, state: FSMContext):
         obj.date_of_birth = datetime.now()
         await obj.asave()
     inline_kb = InlineKeyboardBuilder()
-    web_app_info = WebAppInfo(url=f"https://lamprey-romantic-albacore.ngrok-free.app/{user_id}")
+    web_app_info = WebAppInfo(url=f"https://ghosstyxx.pythonanywhere.com//{user_id}")
     inline_kb.add(types.InlineKeyboardButton(
         text="Launch Axion",
         web_app=web_app_info))

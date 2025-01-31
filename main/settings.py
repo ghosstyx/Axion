@@ -19,7 +19,7 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = ['https://lamprey-romantic-albacore.ngrok-free.app']
+CSRF_TRUSTED_ORIGINS = ['https://ghosstyxx.pythonanywhere.com/']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
