@@ -11,7 +11,7 @@
             cursor: pointer;
         }
         .main-image:active{
-            transform: scale(0.9);
+            transform: scale(0.8);
         }
         .img-div{
             display: flex;
@@ -94,6 +94,6 @@
             .main-image {
                 width: 100%;
                 height: auto;
-                transition: transform 0.3s ease;
+                transition: transform 0.2s ease;
             }
         }
