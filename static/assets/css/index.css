@@ -94,6 +94,8 @@
             .main-image {
                 width: 100%;
                 height: auto;
+            }
+            .main-image:hover, .main-image:focus{
                 transition: transform 0.2s ease;
             }
         }
