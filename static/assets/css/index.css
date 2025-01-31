@@ -97,5 +97,6 @@
             }
             .main-image:hover, .main-image:focus{
                 transition: transform 0.2s ease;
+                -webkit-appearance: none;
             }
         }
